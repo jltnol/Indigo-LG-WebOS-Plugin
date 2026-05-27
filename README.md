@@ -13,7 +13,7 @@ In short, you’ll need to manually install the web socket client
 2. Then run the installer:
 	$ python3 ./get-pip.py
 
-3. Then install the web socket-client.
+3. Then install the web socket-client:
 	pip install websocket-client
 
 4. Download and double click the plugin to install
