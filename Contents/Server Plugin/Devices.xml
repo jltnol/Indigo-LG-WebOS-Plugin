@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Devices>
+
+	<Device type="custom" id="lgWebOSTV">
+		<Name>LG WebOS TV</Name>
+		<ConfigUI>
+			<Field id="address" type="textfield" defaultValue="">
+				<Label>TV IP Address:</Label>
+				<Description>Local IP of your LG TV (e.g. 192.168.1.100)</Description>
+			</Field>
+			<Field id="macAddress" type="textfield" defaultValue="">
+				<Label>MAC Address (for Wake-on-LAN):</Label>
+				<Description>Find at: TV Settings &gt; General &gt; About This TV &gt; Network Info</Description>
+			</Field>
+			<Field id="clientKey" type="textfield" defaultValue="">
+				<Label>Client Key:</Label>
+				<Description>Auto-filled after pairing. Leave blank on first setup.</Description>
+			</Field>
+			<Field id="pairButton" type="button">
+				<Title>Pair with TV</Title>
+				<CallbackMethod>pairWithTV</CallbackMethod>
+			</Field>
+			<Field id="statusMsg" type="label" defaultValue=" ">
+				<Label> </Label>
+			</Field>
+		</ConfigUI>
+		<States>
+			<State id="onOffState">
+				<ValueType>Boolean</ValueType>
+				<TriggerLabel>TV turned on or off</TriggerLabel>
+				<ControlPageLabel>TV Power</ControlPageLabel>
+			</State>
+			<State id="currentInput">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Input changed</TriggerLabel>
+				<ControlPageLabel>Current Input</ControlPageLabel>
+			</State>
+			<State id="currentChannel">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Channel changed</TriggerLabel>
+				<ControlPageLabel>Current Channel</ControlPageLabel>
+			</State>
+			<State id="currentVolume">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Volume changed</TriggerLabel>
+				<ControlPageLabel>Volume</ControlPageLabel>
+			</State>
+			<State id="isMuted">
+				<ValueType>Boolean</ValueType>
+				<TriggerLabel>Mute state changed</TriggerLabel>
+				<ControlPageLabel>Muted</ControlPageLabel>
+			</State>
+			<State id="connectionStatus">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Connection status changed</TriggerLabel>
+				<ControlPageLabel>Connection</ControlPageLabel>
+			</State>
+		</States>
+	</Device>
+
+</Devices>

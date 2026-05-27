@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Actions>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  POWER                                              -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="powerOn" deviceFilter="self.lgWebOSTV">
+		<Name>Power On</Name>
+		<CallbackMethod>powerOn</CallbackMethod>
+	</Action>
+
+	<Action id="powerOff" deviceFilter="self.lgWebOSTV">
+		<Name>Power Off</Name>
+		<CallbackMethod>powerOff</CallbackMethod>
+	</Action>
+
+	<Action id="powerToggle" deviceFilter="self.lgWebOSTV">
+		<Name>Toggle Power</Name>
+		<CallbackMethod>powerToggle</CallbackMethod>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  VOLUME                                             -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="setVolume" deviceFilter="self.lgWebOSTV">
+		<Name>Set Volume</Name>
+		<CallbackMethod>setVolume</CallbackMethod>
+		<ConfigUI>
+			<Field id="volume" type="textfield" defaultValue="20">
+				<Label>Volume (0-100):</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<Action id="volumeUp" deviceFilter="self.lgWebOSTV">
+		<Name>Volume Up</Name>
+		<CallbackMethod>volumeUp</CallbackMethod>
+		<ConfigUI>
+			<Field id="steps" type="textfield" defaultValue="1">
+				<Label>Steps:</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<Action id="volumeDown" deviceFilter="self.lgWebOSTV">
+		<Name>Volume Down</Name>
+		<CallbackMethod>volumeDown</CallbackMethod>
+		<ConfigUI>
+			<Field id="steps" type="textfield" defaultValue="1">
+				<Label>Steps:</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<Action id="muteToggle" deviceFilter="self.lgWebOSTV">
+		<Name>Mute / Unmute</Name>
+		<CallbackMethod>muteToggle</CallbackMethod>
+	</Action>
+
+	<Action id="setMute" deviceFilter="self.lgWebOSTV">
+		<Name>Set Mute State</Name>
+		<CallbackMethod>setMute</CallbackMethod>
+		<ConfigUI>
+			<Field id="muteState" type="menu" defaultValue="true">
+				<Label>Mute:</Label>
+				<List>
+					<Option value="true">Muted</Option>
+					<Option value="false">Unmuted</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  CHANNEL                                            -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="channelUp" deviceFilter="self.lgWebOSTV">
+		<Name>Channel Up</Name>
+		<CallbackMethod>channelUp</CallbackMethod>
+	</Action>
+
+	<Action id="channelDown" deviceFilter="self.lgWebOSTV">
+		<Name>Channel Down</Name>
+		<CallbackMethod>channelDown</CallbackMethod>
+	</Action>
+
+	<Action id="setChannel" deviceFilter="self.lgWebOSTV">
+		<Name>Set Channel Number</Name>
+		<CallbackMethod>setChannel</CallbackMethod>
+		<ConfigUI>
+			<Field id="channelNumber" type="textfield" defaultValue="">
+				<Label>Channel Number:</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  INPUT                                              -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="setInput" deviceFilter="self.lgWebOSTV">
+		<Name>Set Input Source</Name>
+		<CallbackMethod>setInput</CallbackMethod>
+		<ConfigUI>
+			<Field id="inputId" type="menu" defaultValue="HDMI_1">
+				<Label>Input:</Label>
+				<List>
+					<Option value="HDMI_1">HDMI 1</Option>
+					<Option value="HDMI_2">HDMI 2</Option>
+					<Option value="HDMI_3">HDMI 3</Option>
+					<Option value="HDMI_4">HDMI 4</Option>
+					<Option value="AV_1">AV 1</Option>
+					<Option value="AV_2">AV 2</Option>
+					<Option value="COMPONENT">Component</Option>
+					<Option value="PC">PC</Option>
+					<Option value="TUNER">Live TV / Tuner</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  NAVIGATION / REMOTE                               -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="sendKey" deviceFilter="self.lgWebOSTV">
+		<Name>Send Remote Key</Name>
+		<CallbackMethod>sendKey</CallbackMethod>
+		<ConfigUI>
+			<Field id="keyName" type="menu" defaultValue="ENTER">
+				<Label>Key:</Label>
+				<List>
+					<Option value="UP">Up</Option>
+					<Option value="DOWN">Down</Option>
+					<Option value="LEFT">Left</Option>
+					<Option value="RIGHT">Right</Option>
+					<Option value="ENTER">Enter / OK</Option>
+					<Option value="BACK">Back</Option>
+					<Option value="HOME">Home</Option>
+					<Option value="MENU">Menu / Settings</Option>
+					<Option value="EXIT">Exit</Option>
+					<Option value="INFO">Info</Option>
+					<Option value="PLAY">Play</Option>
+					<Option value="PAUSE">Pause</Option>
+					<Option value="STOP">Stop</Option>
+					<Option value="FASTFORWARD">Fast Forward</Option>
+					<Option value="REWIND">Rewind</Option>
+					<Option value="RED">Red</Option>
+					<Option value="GREEN">Green</Option>
+					<Option value="YELLOW">Yellow</Option>
+					<Option value="BLUE">Blue</Option>
+					<Option value="0">0</Option>
+					<Option value="1">1</Option>
+					<Option value="2">2</Option>
+					<Option value="3">3</Option>
+					<Option value="4">4</Option>
+					<Option value="5">5</Option>
+					<Option value="6">6</Option>
+					<Option value="7">7</Option>
+					<Option value="8">8</Option>
+					<Option value="9">9</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  APPS                                               -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="launchApp" deviceFilter="self.lgWebOSTV">
+		<Name>Launch App</Name>
+		<CallbackMethod>launchApp</CallbackMethod>
+		<ConfigUI>
+			<Field id="appId" type="menu" defaultValue="netflix">
+				<Label>App:</Label>
+				<List>
+					<Option value="netflix">Netflix</Option>
+					<Option value="amazon">Prime Video</Option>
+					<Option value="hulu">Hulu</Option>
+					<Option value="disneyplus">Disney+</Option>
+					<Option value="youtube.leanback.v4">YouTube</Option>
+					<Option value="com.webos.app.browser">Web Browser</Option>
+					<Option value="com.webos.app.livetv">Live TV</Option>
+					<Option value="com.webos.app.hdmi1">HDMI 1</Option>
+					<Option value="com.webos.app.hdmi2">HDMI 2</Option>
+					<Option value="com.webos.app.hdmi3">HDMI 3</Option>
+					<Option value="com.webos.app.hdmi4">HDMI 4</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  DISPLAY / PICTURE                                  -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="setPictureMode" deviceFilter="self.lgWebOSTV">
+		<Name>Set Picture Mode</Name>
+		<CallbackMethod>setPictureMode</CallbackMethod>
+		<ConfigUI>
+			<Field id="pictureMode" type="menu" defaultValue="cinema">
+				<Label>Picture Mode:</Label>
+				<List>
+					<Option value="vivid">Vivid</Option>
+					<Option value="standard">Standard</Option>
+					<Option value="cinema">Cinema</Option>
+					<Option value="sport">Sport</Option>
+					<Option value="game">Game</Option>
+					<Option value="filmmaker">Filmmaker</Option>
+					<Option value="expert1">Expert (Bright)</Option>
+					<Option value="expert2">Expert (Dark)</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  TOAST / NOTIFICATION                               -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="showToast" deviceFilter="self.lgWebOSTV">
+		<Name>Show Toast Notification on TV</Name>
+		<CallbackMethod>showToast</CallbackMethod>
+		<ConfigUI>
+			<Field id="message" type="textfield" defaultValue="Hello from Indigo!">
+				<Label>Message:</Label>
+			</Field>
+		</ConfigUI>
+	</Action>
+
+	<!-- ═══════════════════════════════════════════════════ -->
+	<!--  STATUS POLLING                                     -->
+	<!-- ═══════════════════════════════════════════════════ -->
+	<Action id="updateStatus" deviceFilter="self.lgWebOSTV">
+		<Name>Refresh TV Status</Name>
+		<CallbackMethod>updateStatus</CallbackMethod>
+	</Action>
+
+</Actions>
