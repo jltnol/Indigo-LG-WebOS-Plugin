@@ -7,7 +7,7 @@ I am not a “coder” and used AI to write the whole thing. Both the WebOS is p
 
 In short, you’ll need to manually install the web socket client
 
-1. Install Pip
+1. Install Pip:
 	$ wget https://bootstrap.pypa.io/get-pip.py
 
 2. Then run the installer:
